@@ -1,0 +1,16 @@
+courses:
+  name:
+    max_length: 100
+  details:
+    max_length: 255
+subjects:
+  name:
+    max_length: 100
+  details:
+    max_length: 255
+user:
+  name:
+    max_length: 50
+time:
+  time_zone: "Hanoi"
+  in_time: 60
