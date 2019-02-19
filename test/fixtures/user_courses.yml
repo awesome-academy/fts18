@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  course_id: 1
+  status: 1
+  date_join: MyString
+  datetime: MyString
+  date_finish: 2019-02-19 15:14:47
+
+two:
+  user_id: 1
+  course_id: 1
+  status: 1
+  date_join: MyString
+  datetime: MyString
+  date_finish: 2019-02-19 15:14:47

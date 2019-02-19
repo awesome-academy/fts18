@@ -32,23 +32,6 @@ textarea {
   resize: vertical;
 }
 
-.row_book {
-  margin: 0 0 0 0;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  padding: 10;
-  height: 100%;
-}
-
-.row_book:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .center {
   text-align: center;
   h1 {

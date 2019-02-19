@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_30_030618) do
+ActiveRecord::Schema.define(version: 2019_02_19_081806) do
 
   create_table "activities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "trackable_type"
@@ -34,15 +34,15 @@ ActiveRecord::Schema.define(version: 2019_01_30_030618) do
   create_table "course_subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "course_id"
     t.integer "subject_id"
-    t.integer "order"
     t.integer "status"
+    t.integer "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.text "detail"
+    t.string "details"
     t.integer "times"
     t.integer "status"
     t.datetime "created_at", null: false
@@ -58,8 +58,7 @@ ActiveRecord::Schema.define(version: 2019_01_30_030618) do
 
   create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.text "detail"
-    t.integer "times"
+    t.string "details"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -68,9 +67,10 @@ ActiveRecord::Schema.define(version: 2019_01_30_030618) do
   create_table "user_courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "course_id"
-    t.datetime "date_start"
-    t.datetime "date_finish"
     t.integer "status"
+    t.string "date_join"
+    t.string "datetime"
+    t.datetime "date_finish"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -78,18 +78,19 @@ ActiveRecord::Schema.define(version: 2019_01_30_030618) do
   create_table "user_subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "subject_id"
-    t.datetime "date_start"
-    t.datetime "date_finish"
     t.integer "status"
+    t.string "date_join"
+    t.string "datetime"
+    t.datetime "date_finish"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.boolean "admin", default: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.boolean "admin", default: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

@@ -8,7 +8,9 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '606ea3d6b36eccdcdb8f27d9c29ec64e46e1a3398e2712e17e77e7f1154f6b2e29f338d3b18f816a5bbcf16b4a689709ddf28588d3c71a38dbca0434d9a6ab91'
+
+  # config.secret_key = 'e01b0f24c3c737b12fcd694bd6222d0b004768ff32eb550d1241703eb5c6fc8da30f12466146459dc750d6b988db6efd77ffd4713564ff4e5f43ccde184f9504'
+
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -18,6 +20,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
+  config.scoped_views = true
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
@@ -114,7 +117,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '579f825fdda154fe807da252549c78d00d16f35e95a8f2cf8500819316d48e1852785af388c352553533c7b9bdcb2c2d97f3f874807dce6e7e8dc893ee685652'
+  # config.pepper = 'df6b0ae014b33e9287abca9b062e3faceb9a4f11f214cd69f13cbb1842210895dbce4fa1708e9eb4476c5624d075928c14313d795b3a888d069ffcb0fc69bf42'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -126,8 +129,12 @@ Devise.setup do |config|
   # A period that the user is allowed to access the website even without
   # confirming their account. For instance, if set to 2.days, the user will be
   # able to access the website for two days without confirming their account,
-  # access will be blocked just in the third day. Default is 0.days, meaning
-  # the user cannot access the website without confirming their account.
+
+  # access will be blocked just in the third day.
+  # You can also set it to nil, which will allow the user to access the website
+  # without confirming their account.
+  # Default is 0.days, meaning the user cannot access the website without
+  # confirming their account.
   # config.allow_unconfirmed_access_for = 2.days
 
   # A period that the user is allowed to confirm their account before their
@@ -287,5 +294,5 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
-  config.scoped_views = true
+
 end

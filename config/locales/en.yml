@@ -32,5 +32,40 @@
 en:
   hello: "Hello world"
   layouts:
+    basetitle: "Framgia training"
     application:
       title: "Framgia Training System"
+    header:
+      framgia_training: "framgia Trainning"
+      course: "Course"
+      subject: "Subject"
+      profile: "Profile"
+      settings: "Setting"
+      logout: "Logout"
+      login: "Login"
+  static_pages:
+    home:
+      welcome: "Framgia training management"
+      sign_up: "Sing Up"
+  users:
+    sessions:
+      new:
+        title: "Log In"
+        login: "Log in"
+    registrations:
+      edit:
+        title_edit: "Edit"
+        leave_blank: "Leave blank"
+        character: "Character"
+        current_password: "Current password"
+        update: "Update information"
+        cancel: "Cancel"
+        confirm: "Currently waiting confirmation for:"
+        back: "Back"
+      new:
+        title_new: "Create account"
+        signup: "Signup"
+    passwords:
+      new:
+        forgot: "Forgot passwords"
+        send: "Send"

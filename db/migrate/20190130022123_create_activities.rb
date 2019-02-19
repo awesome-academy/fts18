@@ -1,5 +1,7 @@
-# Migration responsible for creating a table with activities
-class CreateActivities < (ActiveRecord.version.release() < Gem::Version.new('5.2.0') ? ActiveRecord::Migration : ActiveRecord::Migration[5.2])
+# # Migration responsible for creating a table with activities
+# class CreateActivities < (ActiveRecord.version.release() < Gem::Version.new('5.2.0') ? ActiveRecord::Migration : ActiveRecord::Migration[5.2])
+class CreateActivities < ActiveRecord::Migration[5.2]
+
   # Create table
   def self.up
     create_table :activities do |t|
@@ -16,6 +18,7 @@ class CreateActivities < (ActiveRecord.version.release() < Gem::Version.new('5.2
     add_index :activities, [:owner_id, :owner_type]
     add_index :activities, [:recipient_id, :recipient_type]
   end
+
   # Drop table
   def self.down
     drop_table :activities
